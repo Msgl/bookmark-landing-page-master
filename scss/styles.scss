@@ -1,0 +1,182 @@
+//Color Palette
+$clr-main-warm: #fa5959;
+$clr-main-light: #5267df;
+$clr-main-dark: #242a45;
+$clr-main-gray: #9194a2;
+//Typography
+$ff-main: 'Rubik', sans-serif;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: white;
+  font-family: $ff-main, sans-serif;
+}
+
+//Style the button to look like a div
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: $ff-main, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+/**HEADER START*/
+header {
+  height: 25px;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 40px;
+}
+
+nav {
+  display: none;
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+}
+
+.toggle-btn {
+  background: url(/images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+//HEADER - MOBILE CLASSES START
+.toggle-btn {
+  float: right;
+}
+
+.mobile-header {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #252b46fa;
+
+  nav {
+    height: 100%;
+    margin-top: 50px;
+    display: grid;
+  }
+
+  a {
+    display: grid;
+    place-content: center;
+
+    color: white;
+  }
+  li {
+    padding: 15px;
+    border-top: #979797 1px solid;
+    border-bottom: 979797 1px solid;
+  }
+
+  .login {
+    border: white 1px solid;
+    padding: 15px;
+    border-radius: 5px;
+  }
+
+  .header-social {
+    align-self: flex-end;
+    justify-self: center;
+    width: 100px;
+    height: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+}
+
+.active {
+  display: block;
+}
+
+.mobile-logo {
+  filter: invert(100%) hue-rotate(190deg) brightness(250%);
+}
+
+.close-btn {
+  background: url(/images/icon-close.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+//HEADER - MOBILE CLASSES END
+
+/**HEADER END*/
+
+/*HERO START*/
+.hero {
+  padding-top: 70px;
+}
+/*HERO END*/
+
+@media only screen and (min-width: 700px) {
+  header {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+    justify-content: space-between;
+    align-content: flex-end;
+  }
+
+  .toggle-btn {
+    display: none;
+  }
+
+  .header-social {
+    display: none;
+  }
+
+  nav {
+    display: flex;
+    color: $clr-main-dark;
+    letter-spacing: 1.5px;
+    line-height: 17px;
+    font-size: 13px;
+
+    ul {
+      display: flex;
+      width: 400px;
+      justify-content: space-around;
+      padding-top: 2px;
+
+      a:hover {
+        color: $clr-main-warm;
+      }
+      .login {
+        background-color: $clr-main-warm;
+        padding: 10px;
+        border: $clr-main-warm 2px solid;
+        border-radius: 5px;
+        color: white;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+          rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+      }
+
+      .login:hover {
+        background-color: white;
+      }
+    }
+  }
+}

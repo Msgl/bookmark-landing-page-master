@@ -1,0 +1,190 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: white;
+  font-family: "Rubik", sans-serif, sans-serif;
+}
+
+button {
+  display: inline-block;
+  border: none;
+  margin: 0;
+  padding: 0;
+  font-family: "Rubik", sans-serif, sans-serif;
+  font-size: 1rem;
+  line-height: 1;
+  background: transparent;
+  -webkit-appearance: none;
+}
+
+/**HEADER START*/
+header {
+  height: 25px;
+  padding-top: 40px;
+  padding-left: 32px;
+  padding-right: 32px;
+  padding-bottom: 40px;
+}
+
+nav {
+  display: none;
+}
+
+nav li {
+  list-style-type: none;
+}
+
+nav a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.toggle-btn {
+  background: url(/images/icon-hamburger.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+.toggle-btn {
+  float: right;
+}
+
+.mobile-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: absolute;
+  height: 100vh;
+  width: 100%;
+  background-color: #252b46fa;
+}
+
+.mobile-header nav {
+  height: 100%;
+  margin-top: 50px;
+  display: -ms-grid;
+  display: grid;
+}
+
+.mobile-header a {
+  display: -ms-grid;
+  display: grid;
+  place-content: center;
+  color: white;
+}
+
+.mobile-header li {
+  padding: 15px;
+  border-top: #979797 1px solid;
+  border-bottom: 979797 1px solid;
+}
+
+.mobile-header .login {
+  border: white 1px solid;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.mobile-header .header-social {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  justify-self: center;
+  width: 100px;
+  height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.active {
+  display: block;
+}
+
+.mobile-logo {
+  -webkit-filter: invert(100%) hue-rotate(190deg) brightness(250%);
+          filter: invert(100%) hue-rotate(190deg) brightness(250%);
+}
+
+.close-btn {
+  background: url(/images/icon-close.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 20px;
+  height: 20px;
+}
+
+/**HEADER END*/
+/*HERO START*/
+.hero {
+  padding-top: 70px;
+}
+
+/*HERO END*/
+@media only screen and (min-width: 700px) {
+  header {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: end;
+        align-content: flex-end;
+  }
+  .toggle-btn {
+    display: none;
+  }
+  .header-social {
+    display: none;
+  }
+  nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    color: #242a45;
+    letter-spacing: 1.5px;
+    line-height: 17px;
+    font-size: 13px;
+  }
+  nav ul {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 400px;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    padding-top: 2px;
+  }
+  nav ul a:hover {
+    color: #fa5959;
+  }
+  nav ul .login {
+    background-color: #fa5959;
+    padding: 10px;
+    border: #fa5959 2px solid;
+    border-radius: 5px;
+    color: white;
+    -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+  }
+  nav ul .login:hover {
+    background-color: white;
+  }
+}
+/*# sourceMappingURL=styles.css.map */

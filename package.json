@@ -1,0 +1,19 @@
+{
+  "name": "bookmark-landing-page-master",
+  "version": "1.0.0",
+  "description": "Frontend Mentor challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Msgl/bookmark-landing-page-master.git"
+  },
+  "author": "Maria Glynou",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Msgl/bookmark-landing-page-master/issues"
+  },
+  "homepage": "https://github.com/Msgl/bookmark-landing-page-master#readme"
+}
