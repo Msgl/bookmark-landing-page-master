@@ -20,22 +20,20 @@ header,
 .features,
 .download,
 .faq {
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-top: 5em;
-  margin-bottom: 5em;
+  margin-top: 10em;
+  margin-bottom: 10em;
 }
 
 h1 {
   line-height: 40px;
-  font-size: 32px;
+  font-size: 54px;
   padding-bottom: 20px;
 }
 
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
-  font-size: 28px;
+  font-size: 36px;
   line-height: 52px;
   font-weight: 600;
   text-align: center;
@@ -218,10 +216,16 @@ nav a {
 .hero {
   text-align: center;
   padding: 20px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
 .hero .myBtn {
   margin-right: 5px;
+}
+
+.hero img {
+  margin-bottom: 50px;
 }
 
 /*HERO END*/
@@ -253,6 +257,7 @@ nav a {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   -webkit-box-shadow: inset -8em 10px 0px -10px white, inset 8em 10px 0px -10px white, inset 0em -5px #fa5959;
           box-shadow: inset -8em 10px 0px -10px white, inset 8em 10px 0px -10px white, inset 0em -5px #fa5959;
+  color: #fa5959;
 }
 
 .show {
@@ -282,6 +287,22 @@ nav a {
   border-radius: 10px;
   -webkit-box-shadow: 1px 8px 29px -25px #000000;
           box-shadow: 1px 8px 29px -25px #000000;
+}
+
+.download .myBtn {
+  position: relative;
+  margin-top: 20px;
+}
+
+.download .myBtn::before {
+  content: '';
+  position: absolute;
+  background-image: url(../images/bg-dots.svg);
+  background-repeat: no-repeat;
+  width: 158%;
+  height: 100%;
+  top: -20px;
+  left: -45px;
 }
 
 /*DOWNLOAD ENDS*/
@@ -317,6 +338,7 @@ nav a {
 /*FAQ ENDS*/
 /*CONTACT STARTS*/
 .contact {
+  height: 400px;
   padding-left: 0;
   padding-right: 0;
   color: white;
@@ -334,10 +356,11 @@ nav a {
 .contact p {
   padding: 0;
   color: white;
+  text-transform: uppercase;
 }
 
 .contact h2 {
-  padding-top: 0;
+  padding-top: 20px;
 }
 
 .contact form {
@@ -358,7 +381,9 @@ nav a {
 /*FOOTER STARTS*/
 footer {
   width: 100vw;
+  height: 300px;
   background-color: #242a45;
+  padding-top: 25px;
 }
 
 footer .footer-menu {
@@ -384,7 +409,8 @@ footer .footer-menu .footer-links li {
 
 footer .footer-menu .footer-links li a {
   text-decoration: none;
-  color: white;
+  text-transform: uppercase;
+  color: #d8dae2;
 }
 
 footer .footer-menu .footer-links li a:hover {
@@ -395,9 +421,12 @@ footer .footer-menu .footer-social {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  gap: 25px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: justify;
+      align-content: space-between;
 }
 
 footer .footer-menu .footer-social img:hover {
@@ -502,26 +531,29 @@ footer .footer-menu .footer-social img:hover {
   .faq .answer {
     width: 500px;
   }
-  .footer-menu {
+  footer {
+    height: 100px;
+  }
+  footer .footer-menu {
     -ms-grid-columns: 1fr 2fr 1fr;
         grid-template-columns: 1fr 2fr 1fr;
     -ms-grid-rows: 25px;
         grid-template-rows: 25px;
-    padding-left: 12%;
-    padding-right: 12%;
+    padding-left: 14%;
+    padding-right: 14%;
   }
-  .footer-menu .footer-logo {
+  footer .footer-menu .footer-logo {
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .footer-menu .footer-links {
+  footer .footer-menu .footer-links {
     padding: 0;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  .footer-menu .footer-links ul {
+  footer .footer-menu .footer-links ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -537,7 +569,6 @@ footer .footer-menu .footer-social img:hover {
     display: grid;
     padding-left: 10%;
     padding-right: 0;
-    padding-top: 100px;
     width: 100%;
     height: 600px;
         grid-template-areas: 'text image';
@@ -612,8 +643,13 @@ footer .footer-menu .footer-social img:hover {
     max-width: 500px;
   }
   .footer-menu {
-    padding-left: 15%;
-    padding-right: 15%;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  .footer-social {
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 /*# sourceMappingURL=styles.css.map */
