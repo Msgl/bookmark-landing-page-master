@@ -38,15 +38,15 @@
       <nav id="header-menu">
         <ul>
           <li><a class="nav-items" href="#features-link">Features</a></li>
-          <li><a class="nav-items" href="#">Pricing</a></li>
-          <li><a class="nav-items" href="#">Contact</a></li>
+          <li><a class="nav-items" href="#download-link">Pricing</a></li>
+          <li><a class="nav-items" href="#contact-link">Contact</a></li>
           <li><a class="nav-items login" href="#">Login</a></li>
         </ul>
-        <div class="header-social">
-          <img src="/images/icon-facebook.svg" alt="facebook login" />
-          <img src="/images/icon-twitter.svg" alt="twiter login" />
-        </div>
       </nav>
+      <div class="header-social">
+        <img src="/images/icon-facebook.svg" alt="facebook login" />
+        <img src="/images/icon-twitter.svg" alt="twiter login" />
+      </div>
     </header>
     <section class="hero">
       <img
@@ -158,7 +158,7 @@
         </div>
       </section>
 
-      <section class="download">
+      <section class="download" id="download-link">
         <h2>Download the extension</h2>
         <p class="download-intro">
           We’ve got more browsers in the pipeline. Please do let us know if
@@ -186,6 +186,7 @@
           </div>
         </div>
       </section>
+
       <section class="faq">
         <h2>Frequently Asked Questions</h2>
         <p class="faq-intro">
@@ -244,24 +245,23 @@
 
         <button class="myBtn">More Info</button>
       </section>
+      <section class="contact" id="contact-link">
+        <div class="contact-intro">
+          <p>35,000+ already joined</p>
+          <h2>Stay up-to-date with what we're doing</h2>
+
+          <form action="">
+            <label for="email"></label>
+            <input
+              type="email"
+              class="myBtn"
+              placeholder="Enter your email address"
+            />
+            <input type="submit" class="myBtn mySubmit" value="Contact Us" />
+          </form>
+        </div>
+      </section>
     </main>
-
-    <div class="contact">
-      <div class="contact-intro">
-        <p>35,000+ already joined</p>
-        <h2>Stay up-to-date with what we're doing</h2>
-
-        <form action="">
-          <label for="email"></label>
-          <input
-            type="email"
-            class="myBtn"
-            placeholder="Enter your email address"
-          />
-          <input type="submit" class="myBtn mySubmit" value="Contact Us" />
-        </form>
-      </div>
-    </div>
 
     <footer>
       <div class="footer-menu">
@@ -273,8 +273,8 @@
         <div class="footer-links">
           <ul>
             <li><a href="#features-link">Features</a></li>
-            <li><a href="#">Pricing</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#download-link">Pricing</a></li>
+            <li><a href="#contact-link">Contact</a></li>
           </ul>
         </div>
 

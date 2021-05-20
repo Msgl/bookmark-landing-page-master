@@ -19,9 +19,7 @@ body {
 }
 
 header,
-.hero,
-main,
-footer {
+.hero {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -30,6 +28,8 @@ footer {
 .features,
 .download,
 .faq {
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 5em;
   margin-bottom: 5em;
 }
@@ -158,6 +158,7 @@ nav {
 }
 
 .mobile-header {
+  top: 0;
   display: flex;
   flex-direction: column;
   position: absolute;
@@ -179,7 +180,6 @@ nav {
   li {
     padding: 15px;
     border-top: #979797 1px solid;
-    border-bottom: 979797 1px solid;
   }
 
   .login {
@@ -189,12 +189,9 @@ nav {
   }
 
   .header-social {
-    align-self: flex-end;
-    justify-self: center;
-    width: 100px;
-    height: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 40px;
   }
 }
 
@@ -312,9 +309,11 @@ nav {
 }
 /*FAQ ENDS*/
 
-/*FOOTER STARTS*/
+/*CONTACT STARTS*/
 
 .contact {
+  padding-left: 0;
+  padding-right: 0;
   .contact-intro {
     padding-bottom: 30px;
   }
@@ -345,6 +344,9 @@ nav {
     background-color: $clr-main-warm;
   }
 }
+/*CONTACT ENDS*/
+
+/*FOOTER STARTS*/
 footer {
   width: 100vw;
   background-color: $clr-main-dark;
@@ -385,7 +387,6 @@ footer {
     }
   }
 }
-
 /*FOOTER ENDS*/
 
 @media only screen and (min-width: 750px) {

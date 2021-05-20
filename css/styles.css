@@ -11,9 +11,7 @@ body {
 }
 
 header,
-.hero,
-main,
-footer {
+.hero {
   padding-left: 5%;
   padding-right: 5%;
 }
@@ -22,6 +20,8 @@ footer {
 .features,
 .download,
 .faq {
+  padding-left: 5%;
+  padding-right: 5%;
   margin-top: 5em;
   margin-bottom: 5em;
 }
@@ -148,6 +148,7 @@ nav a {
 }
 
 .mobile-header {
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -177,7 +178,6 @@ nav a {
 .mobile-header li {
   padding: 15px;
   border-top: #979797 1px solid;
-  border-bottom: 979797 1px solid;
 }
 
 .mobile-header .login {
@@ -187,17 +187,13 @@ nav a {
 }
 
 .mobile-header .header-social {
-  -ms-flex-item-align: end;
-      align-self: flex-end;
-  justify-self: center;
-  width: 100px;
-  height: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 40px;
 }
 
 .active {
@@ -319,8 +315,10 @@ nav a {
 }
 
 /*FAQ ENDS*/
-/*FOOTER STARTS*/
+/*CONTACT STARTS*/
 .contact {
+  padding-left: 0;
+  padding-right: 0;
   color: white;
   padding-top: 20px;
   display: -ms-grid;
@@ -356,6 +354,8 @@ nav a {
   background-color: #fa5959;
 }
 
+/*CONTACT ENDS*/
+/*FOOTER STARTS*/
 footer {
   width: 100vw;
   background-color: #242a45;
