@@ -2,7 +2,8 @@
 $clr-main-warm: #fa5959;
 $clr-main-light: #5267df;
 $clr-main-dark: #242a45;
-$clr-main-gray: #9194a2;
+$clr-main-gray: #d8dae2;
+$clr-light-gray: #f3f3f3d2;
 //Typography
 $ff-main: 'Rubik', sans-serif;
 
@@ -11,30 +12,123 @@ $ff-main: 'Rubik', sans-serif;
   margin: 0;
   padding: 0;
 }
+
 body {
   background-color: white;
   font-family: $ff-main, sans-serif;
 }
 
+header,
+.hero,
+main,
+footer {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.hero,
+.features,
+.download,
+.faq {
+  margin-top: 5em;
+  margin-bottom: 5em;
+}
+
+h1 {
+  line-height: 40px;
+  font-size: 32px;
+  padding-bottom: 20px;
+}
+
+h2 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 28px;
+  line-height: 52px;
+  font-weight: 600;
+  text-align: center;
+}
+
+h3 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 22px;
+  line-height: 52px;
+  font-weight: 600;
+  text-align: center;
+}
+
+h4 {
+  padding-top: 20px;
+  padding-bottom: 10px;
+  font-size: 18px;
+  line-height: 52px;
+  font-weight: 600;
+  text-align: center;
+}
+
+p {
+  line-height: 25px;
+  font-size: 15px;
+  padding-bottom: 20px;
+  max-width: 350px;
+  margin: 0 auto;
+  color: #242a45;
+  text-align: center;
+}
+
+/*BUTTONS START*/
 //Style the button to look like a div
 button {
+  cursor: pointer;
   display: inline-block;
   border: none;
   margin: 0;
   padding: 0;
   font-family: $ff-main, sans-serif;
-  font-size: 1rem;
   line-height: 1;
   background: transparent;
   -webkit-appearance: none;
 }
 
+//Style of the buttons on the page
+.myBtn {
+  background-color: $clr-main-light;
+  border: $clr-main-light 2px solid;
+  cursor: pointer;
+  color: white;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 28px;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+
+  &:hover {
+    background-color: white;
+    border: $clr-main-light 2px solid;
+    color: $clr-main-light;
+  }
+}
+
+.btn-gray {
+  background-color: $clr-light-gray;
+  border: $clr-light-gray 2px solid;
+  color: $clr-main-dark;
+
+  &:hover {
+    background-color: white;
+    border: $clr-main-dark 2px solid;
+    color: $clr-main-dark;
+  }
+}
+/*BUTTONS END*/
+
 /**HEADER START*/
 header {
   height: 25px;
   padding-top: 40px;
-  padding-left: 32px;
-  padding-right: 32px;
   padding-bottom: 40px;
 }
 
@@ -67,12 +161,11 @@ nav {
   display: flex;
   flex-direction: column;
   position: absolute;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: #252b46fa;
 
   nav {
-    height: 100%;
     margin-top: 50px;
     display: grid;
   }
@@ -80,9 +173,9 @@ nav {
   a {
     display: grid;
     place-content: center;
-
     color: white;
   }
+
   li {
     padding: 15px;
     border-top: #979797 1px solid;
@@ -120,18 +213,182 @@ nav {
   width: 20px;
   height: 20px;
 }
-
 //HEADER - MOBILE CLASSES END
 
 /**HEADER END*/
 
 /*HERO START*/
 .hero {
-  padding-top: 70px;
+  text-align: center;
+  padding: 20px;
+
+  .myBtn {
+    margin-right: 5px;
+  }
 }
 /*HERO END*/
 
-@media only screen and (min-width: 700px) {
+/*FEATURES START */
+.features {
+  text-align: center;
+}
+
+.features-menu {
+  display: grid;
+  margin-top: 25px;
+  margin-bottom: 35px;
+  place-content: center;
+
+  button {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: #979797 solid 1px;
+    width: 350px;
+
+    &:first-child {
+      border-top: #979797 solid 1px;
+    }
+
+    &:hover,
+    &:focus {
+      /* offset-x | offset-y | blur-radius | spread-radius | color */
+      box-shadow: inset -8em 10px 0px -10px white,
+        inset 8em 10px 0px -10px white, inset 0em -5px $clr-main-warm;
+    }
+  }
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
+}
+/*FEATURES END*/
+
+/*DOWNLOAD STARTS*/
+.download {
+  display: grid;
+  place-items: center;
+  .card {
+    width: 280px;
+    display: grid;
+    place-items: center;
+    background-color: white;
+    margin-bottom: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 1px 8px 29px -25px #000000;
+  }
+}
+/*DOWNLOAD ENDS*/
+
+/*FAQ STARTS*/
+.faq {
+  display: grid;
+  place-content: center;
+
+  .question {
+    text-align: left;
+    margin-bottom: 10px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    border-bottom: #979797 solid 1px;
+
+    &:first-child {
+      border-top: #979797 solid 1px;
+    }
+  }
+
+  .question,
+  .answer {
+    width: 300px;
+  }
+
+  .myBtn {
+    width: 115px;
+    place-self: center;
+  }
+}
+/*FAQ ENDS*/
+
+/*FOOTER STARTS*/
+
+.contact {
+  .contact-intro {
+    padding-bottom: 30px;
+  }
+  color: white;
+  padding-top: 20px;
+  display: grid;
+  place-content: center;
+  background-color: $clr-main-light;
+  p {
+    padding: 0;
+    color: white;
+  }
+
+  h2 {
+    padding-top: 0;
+  }
+
+  form {
+    display: grid;
+    place-content: center;
+  }
+
+  .myBtn {
+    background-color: white;
+  }
+
+  .mySubmit {
+    background-color: $clr-main-warm;
+  }
+}
+footer {
+  width: 100vw;
+  background-color: $clr-main-dark;
+
+  .footer-menu {
+    display: grid;
+    place-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+
+    .footer-links {
+      padding: 20px;
+      display: flex;
+      li {
+        list-style-type: none;
+        padding: 10px;
+        text-align: center;
+        a {
+          text-decoration: none;
+          color: white;
+
+          &:hover {
+            color: $clr-main-warm;
+          }
+        }
+      }
+    }
+
+    .footer-social {
+      display: flex;
+      justify-content: space-evenly;
+
+      & img:hover {
+        cursor: pointer;
+        filter: brightness(40%) sepia(100%) hue-rotate(-40deg) saturate(500%)
+          contrast(0.85);
+      }
+    }
+  }
+}
+
+/*FOOTER ENDS*/
+
+@media only screen and (min-width: 750px) {
   header {
     padding-left: 10%;
     padding-right: 10%;
@@ -178,5 +435,174 @@ nav {
         background-color: white;
       }
     }
+  }
+
+  .hero {
+    .hero-text {
+      p {
+        text-align: left;
+      }
+    }
+  }
+
+  .features {
+    display: grid;
+    place-content: center;
+    .features-intro {
+      max-width: 500px;
+    }
+
+    .features-menu {
+      grid-template-columns: 200px 200px 200px;
+      place-content: center;
+    }
+
+    img {
+      min-width: 400px;
+      height: auto;
+    }
+
+    button {
+      width: 200px;
+      &:first-child {
+        border-top: none;
+      }
+
+      &:hover,
+      &:focus {
+        //   /* offset-x | offset-y | blur-radius | spread-radius | color */
+        box-shadow: inset 0px -5px $clr-main-warm;
+      }
+    }
+
+    .myBtn {
+      width: 100px;
+    }
+  }
+
+  .download {
+    .download-intro {
+      max-width: 500px;
+    }
+  }
+
+  .faq {
+    place-content: center;
+
+    .question,
+    .answer {
+      width: 500px;
+    }
+  }
+
+  .footer-menu {
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 25px;
+    padding-left: 12%;
+    padding-right: 12%;
+
+    .footer-logo {
+      align-self: center;
+    }
+    .footer-links {
+      padding: 0;
+      align-self: center;
+
+      ul {
+        display: flex;
+        align-self: center;
+        justify-self: center;
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 1050px) {
+  .hero {
+    display: grid;
+    padding-left: 10%;
+    padding-right: 0;
+    padding-top: 100px;
+    width: 100%;
+    height: 600px;
+    grid-template-areas: 'text image';
+
+    .hero-text {
+      grid-area: text;
+      place-self: center left;
+      text-align: left;
+      width: 480px;
+    }
+
+    img {
+      place-self: center;
+      grid-area: image;
+      max-width: 650px;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+    }
+
+    h1 {
+      font-size: 48px;
+      line-height: 52px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 28px;
+      margin: 0;
+      max-width: 500px;
+    }
+
+    .myBtn {
+      line-height: 28px;
+      letter-spacing: 0.25;
+    }
+  }
+
+  .features {
+    .content {
+      display: flex;
+      gap: 40px;
+    }
+
+    .content-text {
+      text-align: left;
+      & h3,
+      & p {
+        text-align: left;
+      }
+    }
+  }
+
+  .download {
+    .card-container {
+      height: 400px;
+      display: flex;
+      gap: 20px;
+      .chrome {
+        align-self: flex-start;
+      }
+
+      .firefox {
+        align-self: center;
+      }
+
+      .opera {
+        align-self: flex-end;
+      }
+    }
+  }
+
+  .faq {
+    .faq-intro {
+      max-width: 500px;
+    }
+  }
+
+  .footer-menu {
+    padding-left: 15%;
+    padding-right: 15%;
   }
 }
