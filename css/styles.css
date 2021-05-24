@@ -76,6 +76,14 @@ body {
 
 /*LAYOUT END*/
 /*TYPOGRAPHY START*/
+h1,
+h2,
+h3,
+h4,
+p {
+  text-align: center;
+}
+
 h1 {
   line-height: 40px;
   padding-bottom: 20px;
@@ -85,7 +93,6 @@ h2 {
   padding-top: 20px;
   padding-bottom: 10px;
   line-height: 52px;
-  font-weight: 600;
   text-align: center;
 }
 
@@ -93,7 +100,6 @@ h3 {
   padding-top: 20px;
   padding-bottom: 10px;
   line-height: 52px;
-  font-weight: 600;
   text-align: center;
 }
 
@@ -101,7 +107,6 @@ h4 {
   padding-top: 20px;
   padding-bottom: 10px;
   line-height: 52px;
-  font-weight: 600;
   text-align: center;
 }
 
@@ -309,18 +314,18 @@ nav a {
   place-content: center;
 }
 
-.features-menu button {
+.features-menu .features-btn {
   padding-top: 20px;
   padding-bottom: 20px;
   border-bottom: #979797 solid 1px;
   width: 350px;
 }
 
-.features-menu button:first-child {
+.features-menu .features-btn:first-child {
   border-top: #979797 solid 1px;
 }
 
-.features-menu button:hover, .features-menu button:focus {
+.features-menu .features-btn:hover, .features-menu .features-btn:focus {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   -webkit-box-shadow: inset -8em 10px 0px -10px white, inset 8em 10px 0px -10px white, inset 0em -5px #fa5959;
           box-shadow: inset -8em 10px 0px -10px white, inset 8em 10px 0px -10px white, inset 0em -5px #fa5959;
@@ -589,13 +594,13 @@ footer .footer-menu .footer-social img:hover {
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .toggle-btn {
+  header .toggle-btn {
     display: none;
   }
-  .header-social {
+  header .header-social {
     display: none;
   }
-  nav {
+  header nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -604,7 +609,7 @@ footer .footer-menu .footer-social img:hover {
     line-height: 17px;
     font-size: 13px;
   }
-  nav ul {
+  header nav ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -613,10 +618,10 @@ footer .footer-menu .footer-social img:hover {
         justify-content: space-around;
     padding-top: 2px;
   }
-  nav ul a:hover {
+  header nav ul a:hover {
     color: #fa5959;
   }
-  nav ul .login {
+  header nav ul .login {
     background-color: #fa5959;
     padding: 10px;
     border: #fa5959 2px solid;
@@ -625,7 +630,7 @@ footer .footer-menu .footer-social img:hover {
     -webkit-box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px, rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
   }
-  nav ul .login:hover {
+  header nav ul .login:hover {
     background-color: white;
   }
   .features {
@@ -642,13 +647,13 @@ footer .footer-menu .footer-social img:hover {
     min-width: 400px;
     height: auto;
   }
-  .features button {
+  .features .features-btn {
     width: 200px;
   }
-  .features button:first-child {
+  .features .features-btn:first-child {
     border-top: none;
   }
-  .features button:hover, .features button:focus {
+  .features .features-btn:hover, .features .features-btn:focus {
     -webkit-box-shadow: inset 0px -5px #fa5959;
             box-shadow: inset 0px -5px #fa5959;
   }
@@ -709,17 +714,8 @@ footer .footer-menu .footer-social img:hover {
 }
 
 @media only screen and (min-width: 1400px) {
-  h4 {
-    padding-top: 20px;
-    padding-bottom: 10px;
-    line-height: 52px;
-    font-weight: 600;
-    text-align: center;
-  }
-  p {
-    line-height: 25px;
-    padding-bottom: 20px;
-    margin: 0 auto;
+  h1 {
+    text-align: left;
   }
   button {
     font-size: 18px;
