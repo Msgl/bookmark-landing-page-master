@@ -20,54 +20,62 @@
     <title>Frontend Mentor | Bookmark landing page</title>
   </head>
   <body>
-    <header id="header">
-      <div>
-        <img
-          id="header-logo"
-          src="/images/logo-bookmark.svg"
-          alt="logo-bookmark"
-        />
-        <button
-          id="header-btn"
-          class="toggle-btn"
-          aria-label="toggle button"
-          onclick="toggleBtn()"
-        ></button>
-      </div>
+    <div class="wrapper">
+      <header id="header">
+        <div>
+          <img
+            id="header-logo"
+            src="/images/logo-bookmark.svg"
+            alt="logo-bookmark"
+          />
+          <button
+            id="header-btn"
+            class="toggle-btn"
+            aria-label="toggle button"
+            onclick="toggleBtn()"
+          ></button>
+        </div>
 
-      <nav id="header-menu">
-        <ul>
-          <li><a class="nav-items" href="#features-link">Features</a></li>
-          <li><a class="nav-items" href="#download-link">Pricing</a></li>
-          <li><a class="nav-items" href="#contact-link">Contact</a></li>
-          <li><a class="nav-items login" href="#">Login</a></li>
-        </ul>
-      </nav>
-      <div class="header-social">
-        <img src="/images/icon-facebook.svg" alt="facebook login" />
-        <img src="/images/icon-twitter.svg" alt="twiter login" />
-      </div>
-    </header>
-    <section class="hero">
-      <img
-        src="/images/illustration-hero.svg"
-        alt="illustration-hero"
-        width="313"
-        height="209"
-        id="hero-img"
-      />
+        <nav id="header-menu">
+          <ul>
+            <li><a class="nav-items" href="#features-link">Features</a></li>
+            <li><a class="nav-items" href="#download-link">Pricing</a></li>
+            <li><a class="nav-items" href="#contact-link">Contact</a></li>
+            <li><a class="nav-items login" href="#">Login</a></li>
+          </ul>
+        </nav>
+        <div class="header-social">
+          <img src="/images/icon-facebook.svg" alt="facebook login" />
+          <img src="/images/icon-twitter.svg" alt="twiter login" />
+        </div>
+      </header>
+      <section class="hero">
+        <div class="overlap">
+          <div class="overlap-img">
+            <img
+              src="/images/illustration-hero.svg"
+              alt="illustration-hero"
+              width="313"
+              height="209"
+              id="hero-img"
+            />
+          </div>
 
-      <div class="hero-text">
-        <h1>A Simple Bookmark Manager</h1>
-        <p>
-          A clean and simple interface to organize your favourite websites. Open
-          a new browser tab and see your sites load instantly. Try it for free.
-        </p>
-        <button class="myBtn">Get it on Chrome</button>
-        <button class="myBtn btn-gray">Get it on Firefox</button>
-      </div>
-    </section>
-    <main>
+          <div class="overlap-background"></div>
+        </div>
+
+        <div class="hero-text">
+          <h1>A Simple Bookmark Manager</h1>
+          <p>
+            A clean and simple interface to organize your favourite websites.
+            Open a new browser tab and see your sites load instantly. Try it for
+            free.
+          </p>
+          <button class="myBtn">Get it on Chrome</button>
+          <button class="myBtn btn-gray">Get it on Firefox</button>
+        </div>
+      </section>
+
       <section class="features" id="features-link">
         <h2>Features</h2>
         <p class="features-intro">
@@ -257,42 +265,42 @@
               type="email"
               class="myBtn"
               placeholder="Enter your email address"
+              required
             />
             <input type="submit" class="myBtn mySubmit" value="Contact Us" />
           </form>
         </div>
       </section>
-    </main>
 
-    <footer>
-      <div class="footer-menu">
-        <img
-          class="footer-logo mobile-logo"
-          src="/images/logo-bookmark.svg"
-          alt="logo-bookmark"
-        />
-        <div class="footer-links">
-          <ul>
-            <li><a href="#features-link">Features</a></li>
-            <li><a href="#download-link">Pricing</a></li>
-            <li><a href="#contact-link">Contact</a></li>
-          </ul>
+      <footer>
+        <div class="footer-menu">
+          <img
+            class="footer-logo mobile-logo"
+            src="/images/logo-bookmark.svg"
+            alt="logo-bookmark"
+          />
+          <div class="footer-links">
+            <ul>
+              <li><a href="#features-link">Features</a></li>
+              <li><a href="#download-link">Pricing</a></li>
+              <li><a href="#contact-link">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-social">
+            <img src="/images/icon-facebook.svg" alt="facebook login" />
+            <img src="/images/icon-twitter.svg" alt="twiter login" />
+          </div>
         </div>
 
-        <div class="footer-social">
-          <img src="/images/icon-facebook.svg" alt="facebook login" />
-          <img src="/images/icon-twitter.svg" alt="twiter login" />
-        </div>
-      </div>
-
-      <!-- <p class="attribution">
+        <!-- <p class="attribution">
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
         >. Coded by <a href="#">Maria Glynou</a>.
       </p> -->
-    </footer>
-
+      </footer>
+    </div>
     <script src="js/scripts.js"></script>
   </body>
 </html>

@@ -18,30 +18,71 @@ body {
   font-family: $ff-main, sans-serif;
 }
 
-header,
-.hero {
-  padding-left: 5%;
-  padding-right: 5%;
+/*LAYOUT START*/
+.wrapper {
+  display: grid;
+  grid-template-columns: minmax(20px, 200px) minmax(300px, 1300px) minmax(
+      20px,
+      200px
+    );
+  grid-template-rows: 100px repeat(8, auto);
+  grid-template-areas:
+    '. header .'
+    '. hero .'
+    '. features .'
+    '. download .'
+    '. faq .'
+    'contact contact contact'
+    'footer footer footer';
+  place-content: center;
+
+  header {
+    grid-area: header;
+  }
+
+  .hero {
+    grid-area: hero;
+  }
+
+  .features {
+    grid-area: features;
+  }
+
+  .download {
+    grid-area: download;
+  }
+
+  .faq {
+    grid-area: faq;
+  }
+
+  .contact {
+    grid-area: contact;
+  }
+
+  footer {
+    grid-area: footer;
+  }
 }
 
 .hero,
 .features,
 .download,
 .faq {
-  margin-top: 10em;
-  margin-bottom: 10em;
+  margin-top: 50px;
+  margin-bottom: 50px;
 }
+/*LAYOUT END*/
 
+/*TYPOGRAPHY START*/
 h1 {
   line-height: 40px;
-  font-size: 54px;
   padding-bottom: 20px;
 }
 
 h2 {
   padding-top: 20px;
   padding-bottom: 10px;
-  font-size: 36px;
   line-height: 52px;
   font-weight: 600;
   text-align: center;
@@ -50,7 +91,6 @@ h2 {
 h3 {
   padding-top: 20px;
   padding-bottom: 10px;
-  font-size: 22px;
   line-height: 52px;
   font-weight: 600;
   text-align: center;
@@ -59,7 +99,6 @@ h3 {
 h4 {
   padding-top: 20px;
   padding-bottom: 10px;
-  font-size: 18px;
   line-height: 52px;
   font-weight: 600;
   text-align: center;
@@ -67,13 +106,13 @@ h4 {
 
 p {
   line-height: 25px;
-  font-size: 15px;
   padding-bottom: 20px;
   max-width: 350px;
   margin: 0 auto;
   color: #242a45;
   text-align: center;
 }
+/*TYPOGRAPHY END*/
 
 /*BUTTONS START*/
 //Style the button to look like a div
@@ -125,13 +164,12 @@ button {
 
 /**HEADER START*/
 header {
-  height: 25px;
   padding-top: 40px;
-  padding-bottom: 40px;
 }
 
 nav {
   display: none;
+
   li {
     list-style-type: none;
   }
@@ -148,10 +186,6 @@ nav {
   cursor: pointer;
   width: 20px;
   height: 20px;
-}
-
-//HEADER - MOBILE CLASSES START
-.toggle-btn {
   float: right;
 }
 
@@ -162,6 +196,8 @@ nav {
   position: absolute;
   height: 100%;
   width: 100%;
+  padding-left: 6%;
+  padding-right: 6%;
   background-color: #252b46fa;
 
   nav {
@@ -209,36 +245,37 @@ nav {
   height: 20px;
 }
 //HEADER - MOBILE CLASSES END
-
 /**HEADER END*/
 
 /*HERO START*/
 .hero {
-  // display: grid;
-  // place-content: center;
   text-align: center;
-  padding: 20px;
-  max-width: 1440px;
-  margin: 0 auto;
+
   .myBtn {
     margin-right: 5px;
   }
-  img {
-    margin-bottom: 50px;
-  }
 
-  // &::before {
-  //   content: '';
-  //   position: absolute;
-  //   display: block;
-  //   min-width: 1000px;
-  //   height: 170px;
-  //   top: 300px;
-  //   left: 200px;
-  //   background-color: $clr-main-light;
-  //   z-index: -10;
-  //   border-radius: 300px;
-  // }
+  .overlap {
+    padding-top: 20px;
+    display: grid;
+    place-content: center;
+    grid-template-columns: 110px minmax(100px, 280px);
+    grid-template-rows: 70px 150px 50px;
+    grid-template-areas:
+      ' img img '
+      ' . blueback ';
+    .overlap-img {
+      grid-area: img;
+    }
+
+    .overlap-background {
+      grid-area: blueback;
+      background-color: $clr-main-light;
+      border-top-left-radius: 70px;
+      border-bottom-left-radius: 70px;
+      z-index: -100;
+    }
+  }
 }
 /*HERO END*/
 
@@ -321,13 +358,46 @@ nav {
 
   .question {
     text-align: left;
+    margin: 0 auto;
     margin-bottom: 10px;
     padding-top: 15px;
     padding-bottom: 15px;
     border-bottom: #979797 solid 1px;
+    position: relative;
+    font-weight: 500;
 
     &:first-child {
       border-top: #979797 solid 1px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      width: 20px;
+      height: 10px;
+      top: 25px;
+      left: 95%;
+      background: url(/images/icon-arrow.svg);
+      background-repeat: no-repeat;
+      background-size: 70%;
+      filter: brightness(130%) grayscale(100%) saturate(10%) contrast(0.9);
+      z-index: -10;
+    }
+
+    &:hover {
+      color: $clr-main-warm;
+    }
+  }
+
+  .open-answer.question {
+    color: $clr-main-warm;
+    font-weight: 600;
+    border-bottom: none;
+    &::after {
+      filter: brightness(70%) grayscale(0%) sepia(100%) hue-rotate(-50deg)
+        saturate(650%) contrast(0.8);
+      transform: rotateX(180deg);
     }
   }
 
@@ -336,7 +406,12 @@ nav {
     width: 300px;
   }
 
+  .answer {
+    border-bottom: #979797 solid 1px;
+    padding-bottom: 25px;
+  }
   .myBtn {
+    margin-top: 25px;
     width: 115px;
     place-self: center;
   }
@@ -344,12 +419,10 @@ nav {
 /*FAQ ENDS*/
 
 /*CONTACT STARTS*/
-
 .contact {
   height: 400px;
-  padding-left: 0;
-  padding-right: 0;
-
+  padding-left: 5%;
+  padding-right: 5%;
   color: white;
   padding-top: 20px;
   display: grid;
@@ -380,13 +453,20 @@ nav {
 
   .mySubmit {
     background-color: $clr-main-warm;
+    border: 2px solid $clr-main-warm;
+    font-weight: 600;
+
+    &:hover {
+      color: $clr-main-warm;
+      background: white;
+      border-color: $clr-main-warm;
+    }
   }
 }
 /*CONTACT ENDS*/
 
 /*FOOTER STARTS*/
 footer {
-  width: 100vw;
   height: 300px;
   background-color: $clr-main-dark;
   padding-top: 25px;
@@ -433,12 +513,25 @@ footer {
 /*FOOTER ENDS*/
 
 @media only screen and (min-width: 750px) {
+  h1 {
+    font-size: 48px;
+    line-height: 52px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+
+  p {
+    max-width: 500px;
+  }
   header {
-    padding-left: 10%;
-    padding-right: 10%;
     display: flex;
     justify-content: space-between;
-    align-content: flex-end;
   }
 
   .toggle-btn {
@@ -481,20 +574,9 @@ footer {
     }
   }
 
-  .hero {
-    .hero-text {
-      p {
-        text-align: left;
-      }
-    }
-  }
-
   .features {
     display: grid;
     place-content: center;
-    .features-intro {
-      max-width: 500px;
-    }
 
     .features-menu {
       grid-template-columns: 200px 200px 200px;
@@ -514,7 +596,6 @@ footer {
 
       &:hover,
       &:focus {
-        //   /* offset-x | offset-y | blur-radius | spread-radius | color */
         box-shadow: inset 0px -5px $clr-main-warm;
       }
     }
@@ -524,28 +605,27 @@ footer {
     }
   }
 
-  .download {
-    .download-intro {
-      max-width: 500px;
-    }
-  }
-
   .faq {
     place-content: center;
+    h2 {
+      width: 500px;
+    }
+    .faq-intro {
+      width: 500px;
+    }
 
     .question,
     .answer {
       width: 500px;
     }
   }
+
   footer {
     height: 100px;
     .footer-menu {
       grid-template-columns: 1fr 2fr 1fr;
       grid-template-rows: 25px;
-      padding-left: 14%;
-      padding-right: 14%;
-
+      padding-left: 100px;
       .footer-logo {
         align-self: center;
       }
@@ -563,41 +643,65 @@ footer {
   }
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1400px) {
+  h4 {
+    padding-top: 20px;
+    padding-bottom: 10px;
+    line-height: 52px;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  p {
+    line-height: 25px;
+    padding-bottom: 20px;
+    margin: 0 auto;
+  }
+
+  button {
+    font-size: 18px;
+  }
+
   .hero {
     display: grid;
-    padding-left: 10%;
-    padding-right: 0;
-    width: 100%;
     height: 600px;
     grid-template-areas: 'text image';
+    text-align: left;
 
     .hero-text {
       grid-area: text;
       place-self: center left;
-      text-align: left;
-      width: 480px;
+      width: 500px;
+
+      p {
+        text-align: left;
+      }
+    }
+
+    .overlap {
+      grid-area: image;
+      padding-top: 20px;
+      display: grid;
+      place-content: center;
+      grid-template-columns: 150px minmax(100px, 340px);
+      grid-template-rows: 150px 200px;
+      grid-template-areas:
+        ' img img '
+        '. blueback';
     }
 
     img {
       place-self: center;
-      grid-area: image;
-      max-width: 650px;
+      max-width: 600px;
       width: 100%;
       height: auto;
       object-fit: contain;
-    }
-
-    h1 {
-      font-size: 48px;
-      line-height: 52px;
     }
 
     p {
       font-size: 18px;
       line-height: 28px;
       margin: 0;
-      max-width: 500px;
     }
 
     .myBtn {
@@ -638,17 +742,6 @@ footer {
         align-self: flex-end;
       }
     }
-  }
-
-  .faq {
-    .faq-intro {
-      max-width: 500px;
-    }
-  }
-
-  .footer-menu {
-    padding-left: 30%;
-    padding-right: 30%;
   }
 
   .footer-social {
