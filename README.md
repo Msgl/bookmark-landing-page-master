@@ -10,7 +10,6 @@ This is a solution to the [Bookmark landing page challenge on Frontend Mentor](h
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [What I learned](#what-i-learned)
 
 ## Overview
 
@@ -26,12 +25,13 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![myscreenshot](https://user-images.githubusercontent.com/11541430/119362040-f70ea780-bcb4-11eb-8ab0-de2261847dce.png)
 
-### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+### Links!
+
+
+- Live Site URL: (https://bookmark-landing-page-master-beta.vercel.app/)
 
 ## My process
 
