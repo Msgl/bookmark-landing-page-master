@@ -66,12 +66,17 @@ body {
   grid-area: footer;
 }
 
-.hero,
 .features,
 .download,
 .faq {
   margin-top: 50px;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
+}
+
+.features-intro,
+.download-intro,
+.faq-intro {
+  margin-bottom: 30px;
 }
 
 /*LAYOUT END*/
@@ -278,8 +283,8 @@ nav a {
   place-content: center;
   -ms-grid-columns: 110px minmax(100px, 280px);
       grid-template-columns: 110px minmax(100px, 280px);
-  -ms-grid-rows: 70px 150px 50px;
-      grid-template-rows: 70px 150px 50px;
+  -ms-grid-rows: 70px 150px 10px;
+      grid-template-rows: 70px 150px 10px;
       grid-template-areas: ' img img ' ' . blueback ';
 }
 
@@ -387,7 +392,6 @@ nav a {
 
 .faq .question {
   text-align: left;
-  margin: 0 auto;
   margin-bottom: 10px;
   padding-top: 15px;
   padding-bottom: 15px;
@@ -488,6 +492,10 @@ nav a {
   place-content: center;
   padding-left: 40px;
   padding-right: 40px;
+}
+
+.contact form--error {
+  color: green;
 }
 
 .contact .myBtn {

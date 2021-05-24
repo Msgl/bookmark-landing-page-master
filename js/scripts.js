@@ -1,5 +1,5 @@
 //Toggle navigation menu on mobile
-const toggleBtn = () => {
+function toggleBtn() {
   const header = document.getElementById('header');
   const logo = document.getElementById('header-logo');
   const btn = document.getElementById('header-btn');
@@ -9,10 +9,10 @@ const toggleBtn = () => {
   header.classList.toggle('mobile-header');
   btn.classList.toggle('close-btn');
   logo.classList.toggle('mobile-logo');
-};
+}
 
 //Feature slider
-const featureSlider = (element) => {
+function featureSlider(element) {
   const slides = document.querySelectorAll('.slide');
 
   slides.forEach((item) => {
@@ -23,7 +23,10 @@ const featureSlider = (element) => {
       item.classList.add('hide');
     }
   });
-};
+}
+// const featureSlider = (element) => {
+
+// };
 
 //FAQ Accordion
 /*
@@ -33,7 +36,8 @@ const featureSlider = (element) => {
 - The forEach() method takes as a parameter "element" which is the current element being processed in the array.
 - So we execute forEach() for each of the answers in the array and we check if the parameter that we passed (param) is the same as the id of the answer (element.id). If they are the same we toggle the classes.
 */
-const faqAccordion = (param) => {
+
+function faqAccordion(param) {
   const answers = document.querySelectorAll('.answer');
 
   answers.forEach((element) => {
@@ -43,4 +47,16 @@ const faqAccordion = (param) => {
       element.previousElementSibling.classList.toggle('open-answer');
     }
   });
-};
+}
+
+//Change the validation message if a) input is empty and b) the pattern of input does not match an email
+const email = document.querySelector('#email');
+const submit = document.querySelector('#submit');
+
+submit.addEventListener('click', () => {
+  if (email.validity.valueMissing) {
+    email.setCustomValidity('Please add your email');
+  } else if (email.validity.typeMismatch) {
+    email.setCustomValidity("Whoops, make sure it's an email");
+  }
+});
