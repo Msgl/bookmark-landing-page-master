@@ -443,19 +443,28 @@ nav {
   }
 
   form {
-    display: grid;
+    display: flex;
+    flex-direction: column;
     place-content: center;
+    padding-left: 40px;
+    padding-right: 40px;
   }
 
   .myBtn {
     background-color: white;
+    color: $clr-main-dark;
+    border: 2px solid white;
+    margin-bottom: 10px;
+    &:hover {
+      color: $clr-main-dark;
+    }
   }
 
   .mySubmit {
     background-color: $clr-main-warm;
     border: 2px solid $clr-main-warm;
     font-weight: 600;
-
+    color: white;
     &:hover {
       color: $clr-main-warm;
       background: white;
@@ -620,6 +629,15 @@ footer {
     }
   }
 
+  .contact {
+    form {
+      flex-direction: row;
+      .myBtn {
+        margin-right: 10px;
+      }
+    }
+  }
+
   footer {
     height: 100px;
     .footer-menu {
@@ -743,7 +761,8 @@ footer {
       }
     }
   }
-
+  .contact {
+  }
   .footer-social {
     justify-content: space-between;
   }

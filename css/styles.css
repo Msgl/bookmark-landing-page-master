@@ -473,19 +473,34 @@ nav a {
 }
 
 .contact form {
-  display: -ms-grid;
-  display: grid;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   place-content: center;
+  padding-left: 40px;
+  padding-right: 40px;
 }
 
 .contact .myBtn {
   background-color: white;
+  color: #242a45;
+  border: 2px solid white;
+  margin-bottom: 10px;
+}
+
+.contact .myBtn:hover {
+  color: #242a45;
 }
 
 .contact .mySubmit {
   background-color: #fa5959;
   border: 2px solid #fa5959;
   font-weight: 600;
+  color: white;
 }
 
 .contact .mySubmit:hover {
@@ -652,6 +667,15 @@ footer .footer-menu .footer-social img:hover {
   .faq .question,
   .faq .answer {
     width: 500px;
+  }
+  .contact form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .contact form .myBtn {
+    margin-right: 10px;
   }
   footer {
     height: 100px;
